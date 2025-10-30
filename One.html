@@ -38,7 +38,7 @@
           <audio id="bgMusic" loop>
             <source  src="./Oorum Blood.mp3" type="audio/mpeg" />
           </audio>
-          <p>0:30 / 3:31</p>
+         <div id="timeDisplay">0:00 / 0:00</div>
         </div>
       </div>
     </div>
@@ -51,6 +51,27 @@ function toggleMusic() {
     music.pause();
   }
 }
+
+  const audio = document.getElementById("bgMusic");
+  const timeDisplay = document.getElementById("timeDisplay");
+
+  // When audio metadata is loaded (to know total duration)
+  audio.addEventListener("loadedmetadata", () => {
+    timeDisplay.textContent = `0:00 / ${formatTime(audio.duration)}`;
+  });
+
+  // Update current time as audio plays
+  audio.addEventListener("timeupdate", () => {
+    timeDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+  });
+
+  function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs < 10 ? "0" + secs : secs}`;
+  }
+
+
 </script>
 
   </body>
