@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="One.css" />
+    <link rel="icon" type="image/.png" href="wallhaven-1p1l69.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="AudioChamper">
+      <div class="audioContainer">
+        <div class="audioCard"></div>
+        <div class="audio-content">
+          <div class="music-wave">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <p>
+            
+    <button onclick="toggleMusic()">
+   
+   <i class="fa-solid fa-music"></i>
+    </button> Music</p>
+          <audio id="bgMusic" loop>
+            <source  src="./Oorum Blood.mp3" type="audio/mpeg" />
+          </audio>
+          <p>0:30 / 3:31</p>
+        </div>
+      </div>
+    </div>
+    <script>
+function toggleMusic() {
+  const music = document.getElementById('bgMusic');
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
+}
+</script>
+
+  </body>
+</html>
