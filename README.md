@@ -8,9 +8,9 @@ This project showcases a responsive music card design that can be used for music
 ## 🚀 Features
 
 - 🎧 Clean and minimal audio card UI  
-- 📱 Fully responsive design  
+- 📱 Minimal responsive design  
 - 💿 Custom audio player with album cover  
-- 🌈 Easy to customize colors and layout  
+
 - 🧠 Built using only HTML and CSS  
 
 ---
@@ -19,7 +19,7 @@ This project showcases a responsive music card design that can be used for music
 
 Below is a preview of the Audio Card Website layout:
 
-![Preview](Document.png.png)
+![Preview](Document.png)
 
 *(Replace `preview.png` with a screenshot of your site.)*
 
